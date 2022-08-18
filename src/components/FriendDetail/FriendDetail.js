@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const FriendDetail = () => {
     // const params = useParams();
     // but evabe na kore destructuring krbo
     const { friendId } = useParams();
+    const [friend, setFriend] = useState({});
+
+    useEffect(() => {
+        const url = `https://jsonplaceholder.typicode.com/users/${friendId}`;
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setFriend(data));
+    }, [])
     return (
         <div>
             <h2>This is details of a bondhu : {friendId}</h2>
+            <h3>Name: {friend.name} </h3>
+            <h4>Email: {friend.email} </h4>
+            <h6>Website: {friend.website}</h6>
+            <p>city: {friend.address?.city}</p>
+            <p><small>lat: {friend.address?.geo?.lat}</small></p>
+            {/* optional chaining na dile error dibe karon upore default object dewa ache */}
+            {/* r property gula undefined ke access korte pare na tai optional chaining dilam  */}
         </div>
     );
 };
