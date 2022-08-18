@@ -16,13 +16,14 @@ const Header = () => {
                 {/* a diye korle reload hbe  */}
 
                 {/* second way  */}
-                {/* <Link to="/">Home</Link>
+                <Link to="/">Home</Link>
                 <Link to="/friends">Friends</Link>
-                <Link to="/about">About</Link> */}
+                <Link to="/posts">Posts</Link>
+                <Link to="/about">About</Link>
                 {/* 3rd way */}
-                <CustomLink to="/">Home</CustomLink>
+                {/* <CustomLink to="/">Home</CustomLink>
                 <CustomLink to="/friends">Friends</CustomLink>
-                <CustomLink to="/about">About</CustomLink>
+                <CustomLink to="/about">About</CustomLink> */}
             </nav>
             {/* jetay click korbo shetai chole jachche  */}
         </div>
