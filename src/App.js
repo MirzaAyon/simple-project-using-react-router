@@ -1,10 +1,22 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import About from './components/About/About';
+import Friends from './components/Friends/Friends';
+import Home from './components/Home/Home';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
     <div className="App">
-
+      <h1>Welcome to my router</h1>
+      <Routes>
+        <Route path="/" element={<Home></Home>} > </Route>
+        <Route path="/friends" element={<Friends></Friends>} > </Route>
+        <Route path="/about" element={<About></About>}> </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
+        {/* ei star wala ta shobar nichee dibo ta naohole eta shobai ke capture kore felbe */}
+      </Routes>
     </div>
   );
 }
