@@ -11,6 +11,7 @@ const Friend = (props) => {
         // eta direct o dewa jae abr templete string diyeo dewa jae 
         //amra dynamic route hshebe ek ta place e jete pari link banae o korte pari
         //abr coding er maddhomeo jete pari use navigate use kore 
+        //link banae o korte pari btn banae o korte pari
     }
     return (
         <div>
